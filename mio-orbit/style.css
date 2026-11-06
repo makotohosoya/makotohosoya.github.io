@@ -1,0 +1,37 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+/* TD版と同じく正方形（1080×1080）を、画面に収まる大きさで表示する */
+#view {
+  width: min(100vw, 100vh);
+  height: min(100vw, 100vh);
+  touch-action: none;
+  cursor: crosshair;
+}
+
+#hint {
+  position: fixed;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  text-align: center;
+  font: 13px Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  transition: opacity 1s;
+}
+
+#hint.hidden {
+  opacity: 0;
+}

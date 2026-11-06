@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mio Orbit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="view" aria-label="探査機みおの航跡。画面に触れると、信号が地球から水星へ旅をします"></canvas>
+  <script>
+    if (new URLSearchParams(location.search).get('lang') === 'en') {
+      document.documentElement.lang = 'en';
+      document.title = 'mm web';
+      document.getElementById('view').setAttribute('aria-label', "Mio's trajectory. Touch the screen to send a signal from Earth to Mercury.");
+    }
+  </script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
